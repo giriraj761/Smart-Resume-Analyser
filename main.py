@@ -18,6 +18,11 @@ from Courses import ds_course, web_course, android_course, ios_course, uiux_cour
 import pafy
 import plotly.express as px
 from resume_classifier import ResumeClassifier
+# Import the pdf_reader function from pdf_processor.py
+from pdf_processor import pdf_reader
+
+
+
 
 def get_table_download_link(df, filename, text):
     """Generates a link allowing the data in a given panda dataframe to be downloaded
@@ -113,6 +118,7 @@ def run():
     cursor.execute(table_sql)
     
     if choice == 'Normal User':
+
         pdf_file = st.file_uploader("Choose your Resume", type=["pdf"])
         if pdf_file is not None:
             save_image_path = './Uploaded_Resumes/' + pdf_file.name
