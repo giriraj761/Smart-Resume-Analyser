@@ -49,7 +49,7 @@ class ResumeClassifier:
         with open(classifier_path, 'rb') as f:
             self.classifier = pickle.load(f)
 
-if __name__ == "__classifier__":
+if __name__ == "__main__":
     X_train = ["Experienced in machine learning and data science",
                "Web developer with knowledge of JavaScript and React",
                "Software engineer specializing in backend development"]
